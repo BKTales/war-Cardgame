@@ -1,8 +1,9 @@
 package bk.tales;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
-public class DeckCreator {
+public class DeckManager {
 
         ArrayList<Card> deck;
         Card card;
@@ -18,7 +19,13 @@ public class DeckCreator {
                 }
             }
 
+            shuffle();
+
             return new Deck(deck);
+        }
+
+        public void shuffle(){
+            Collections.shuffle(deck);
         }
             
 }
