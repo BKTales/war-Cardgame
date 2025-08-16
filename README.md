@@ -35,6 +35,7 @@ This project simulates a card game between two players (Player A and Player B). 
    
 ## Example output
 
+```
 CURRENTLY PLAYING ROUND: 1
 CARDS IN A 26
 CARDS IN B 26
@@ -45,6 +46,7 @@ CARD PLAYED BY PLAYER B: CARD: King of DIAMONDS
 PLAYER B WON THE ROUND!
 ADDING CARD CARD: King of DIAMONDS to PLAYER A
 ----------------------------------------------------------------------
+```
 
 ## Rules
 
