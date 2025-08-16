@@ -18,10 +18,11 @@ public class Card {
         return value;
     }
 
+    @Override
     public String toString(){
         String printCard;
 
-        printCard = "---\n" + "SHAPE:" + shape + "\nVALUE:" + value + "\n---";
+        printCard = "CARD: " + value + " of " + shape;
 
         return printCard;
     }

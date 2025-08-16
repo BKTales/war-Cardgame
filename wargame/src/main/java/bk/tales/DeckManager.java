@@ -7,7 +7,10 @@ public class DeckManager {
 
         ArrayList<Card> cardDeck = new ArrayList<>();
         Card card;
-        String[] values = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Q", "J", "K", "A"};
+        String[] values = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Queen", "Jack", "King", "Ace"};
+
+        int index01;
+        int index02;
 
 
         public Deck createDeck(){
@@ -29,6 +32,27 @@ public class DeckManager {
 
         public void shuffle(){
             Collections.shuffle(cardDeck);
+        }
+
+        public int winCondition(String value01, String value02){
+
+            for (int i = 0; i < values.length; i++) {
+                if(values[i].equals(value01)){
+                    index01 = i;
+                }else if(values[i].equals(value02)){
+                    index02 = i;
+                }
+            }
+
+            if(index01 > index02){
+                return 1;
+            }else if(index01 < index02) {
+                return 0;
+            }else if(index01 == index02){
+                return -1;
+            }
+
+            return 99;
         }
            
 }

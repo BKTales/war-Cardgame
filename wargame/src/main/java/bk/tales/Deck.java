@@ -10,6 +10,33 @@ public class Deck {
         deck = cardDeck;
     }
 
+    public boolean cardExits(Card card){
+        for (int i = 0; i < deckSize(); i++) {
+            if(deck.contains(card)){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        return false;
+    }
+
+    public int deckSize(){
+        return deck.size();
+    }
+
+    public void addCard(Card card){
+        deck.add(card);
+    }
+
+    public void removeCard(Card card){
+        deck.remove(card);
+    }
+
+    public Card getCardIndex(int index){
+        return deck.get(index);
+    }
+
     @Override
     public String toString(){
         String printable = " ";
