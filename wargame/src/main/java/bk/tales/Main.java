@@ -8,6 +8,11 @@ public class Main
 { 
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        DeckManager deckManager = new DeckManager();
+        Deck deck = deckManager.createDeck();
+
+        System.out.println("This is my deck:");
+
+        System.out.println(deck);
     }
 }

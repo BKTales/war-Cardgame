@@ -5,7 +5,7 @@ import java.util.Collections;
 
 public class DeckManager {
 
-        ArrayList<Card> deck;
+        ArrayList<Card> cardDeck = new ArrayList<>();
         Card card;
         String[] values = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Q", "J", "K", "A"};
 
@@ -14,18 +14,21 @@ public class DeckManager {
 
             for (int i = 0; i < Shapes.values().length; i++){
                 for (int j = 0; j < values.length; j++){
-                    card = new Card(Shapes.values()[i], values[j]);
-                    deck.add(card);
+                    cardDeck.add(createCard(Shapes.values()[i], values[j]));
                 }
             }
 
             shuffle();
 
-            return new Deck(deck);
+            return new Deck(cardDeck);
+        }
+
+        private Card createCard(Shapes shape, String value){
+            return new Card(shape, value);
         }
 
         public void shuffle(){
-            Collections.shuffle(deck);
+            Collections.shuffle(cardDeck);
         }
-            
+           
 }

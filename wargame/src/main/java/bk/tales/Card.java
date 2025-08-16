@@ -17,4 +17,12 @@ public class Card {
     public String value(){
         return value;
     }
+
+    public String toString(){
+        String printCard;
+
+        printCard = "---\n" + "SHAPE:" + shape + "\nVALUE:" + value + "\n---";
+
+        return printCard;
+    }
 }
